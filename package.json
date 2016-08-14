@@ -1,0 +1,26 @@
+{
+  "name": "blog-boilerplate",
+  "version": "0.1.0",
+  "description": "An html boilerplate dedicated to the blogs",
+  "main": "./scripts/build.js",
+  "scripts": {
+    "build": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuzonp/blog-boilerplate.git"
+  },
+  "author": "Thomas Girard <hello@thomasgirard.fr> (http://www.thomasgirard.fr/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuzonp/blog-boilerplate/issues"
+  },
+  "homepage": "https://github.com/vuzonp/blog-boilerplate#readme",
+  "private": true,
+  "devDependencies": {
+    "cli-color": "^1.1.0",
+    "glob": "^7.0.5",
+    "handlebars": "^4.0.5"
+  }
+}
