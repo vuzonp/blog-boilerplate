@@ -12,8 +12,8 @@ const handlebars = require("handlebars");
 //------------------------------------------------------------------------------
 
 const data = require("../data.json");
-const dist = path.normalize(__dirname + "../dist/");
-const src = path.normalize(__dirname + "../src/");
+const dist = path.normalize(__dirname + "/../dist/");
+const src = path.normalize(__dirname + "/../src/");
 
 /**
  * Converts the templates to html
