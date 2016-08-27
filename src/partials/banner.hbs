@@ -4,13 +4,17 @@
 <header id="banner" class="site-header">
 
   <div itemprop="hasPart" itemscope itemtype="WPHeader">
-    <h1 id="sitename" class="site-headline" itemprop="name">
+    <!-- http://a11yproject.com/posts/aria-landmark-roles/ -->
+    <h1 role="banner" id="sitename" class="site-headline" itemprop="name">
       <a href="{{ blog.url }}/"
         class="site-logo"
         rel="home"
         tabindex="1"
         aria-label="Go to homepage">
-
+        <!--[if lte IE 8]>
+        <img src="#" class="site-logo__pict logo logo--png" alt="" />
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
         <svg
           id="main-logotype"
           aria-labelledby="headline"
@@ -23,7 +27,7 @@
           <desc id="logodesc">Objective description of the logo</desc>
           <rect x="0" y="0" width="128" height="128" />
         </svg>
-
+        <!--<![endif]-->
       </a>
       <p id="subtitle" class="a11y-sr-only">{{ blog.description }}</p>
     </h1>
