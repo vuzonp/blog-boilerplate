@@ -5,6 +5,7 @@
   "main": "./scripts/build.js",
   "scripts": {
     "build": "node ./scripts/build.js",
+    "watch": "nodemon -e hbs,scss -x \"npm run build\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,9 @@
   "devDependencies": {
     "cli-color": "^1.1.0",
     "glob": "^7.0.5",
-    "handlebars": "^4.0.5"
+    "gm": "^1.23.0",
+    "handlebars": "^4.0.5",
+    "node-sass": "^3.10.0",
+    "nodemon": "^1.10.2"
   }
 }

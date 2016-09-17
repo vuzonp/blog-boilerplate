@@ -7,6 +7,7 @@ const path = require("path");
 const clc = require('cli-color');
 const glob = require("glob");
 const handlebars = require("handlebars");
+const sass = require("node-sass");
 
 // Setup
 //------------------------------------------------------------------------------
@@ -25,7 +26,7 @@ function make(file) {
 
     let template = null;
     let html = "";
-    let outputFile = path.normalize(
+    let outfile = path.normalize(
       path.format({
         dir: dist,
         name: path.parse(file)["name"],
@@ -33,17 +34,17 @@ function make(file) {
       })
     );
 
-    try {
-      template = handlebars.compile(src);
-      html = template(data);
+    template = handlebars.compile(src);
+    html = template(data);
 
-      fs.writeFile(outputFile, html);
-      console.log(clc.green("✔", outputFile));
-
-    } catch(err) {
-      console.error(clc.red("✘", outputFile));
-      console.error(clc.italic("⮑", err.message));
-    }
+    fs.writeFile(outfile, html, function(err) {
+      if (err) {
+        console.error(clc.red("✘", outfile));
+        console.error(clc.italic("⮑", err.message));
+      } else {
+        console.log(clc.green("✔", outfile));
+      }
+    });
 
   });
 }
@@ -54,6 +55,7 @@ function make(file) {
 glob(src + "partials/*.hbs", {}, function(err, files) {
   if (err) { throw err; }
 
+  // Prepares the partials
   files.forEach(function(file) {
     let partialContent = fs.readFileSync(file);
     if (partialContent) {
@@ -73,5 +75,30 @@ glob(src + "partials/*.hbs", {}, function(err, files) {
       make(file);
     });
   });
+
+});
+
+// Stylesheets
+const cssOutfile = dist + "styles.css"
+
+sass.render({
+  file: src + "styles.scss",
+  options: {
+    outputStyle: "compressed"
+  }
+}, function(err, result) {
+  if (err) { throw err; }
+
+    template = handlebars.compile(src);
+    html = template(data);
+
+    fs.writeFile(cssOutfile, result.css, function(err) {
+      if (err) {
+        console.error(clc.red("✘", cssOutfile));
+        console.error(clc.italic("⮑", err.message));
+      } else {
+        console.log(clc.yellow("✔", cssOutfile));
+      }
+    });
 
 });
