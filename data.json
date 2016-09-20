@@ -1,3 +1,17 @@
 {
-  
+  "blog": {
+    "lang": "en",
+    "name": "Biff the Understudy",
+    "shortdesc": "An actor from Athkatla",
+    "longdesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "url": "http://blog.example.com/",
+    "logo": "http://placehold.it/240x240",
+    "social": {
+      "google": "https://plus.google.com/+BiffUnderstudy"
+    },
+    "date": {
+      "published": "1998-11-30",
+      "modified": "2000-09-24"
+    }
+  }
 }
