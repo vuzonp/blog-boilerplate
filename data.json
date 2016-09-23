@@ -1,13 +1,15 @@
 {
   "blog": {
+    "author": "Biff",
     "lang": "en",
     "name": "Biff the Understudy",
     "shortdesc": "An actor from Athkatla",
     "longdesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "url": "http://blog.example.com/",
+    "url": "http://example.com/",
     "logo": "http://placehold.it/240x240",
     "social": {
-      "google": "https://plus.google.com/+BiffUnderstudy"
+      "google": "https://plus.google.com/+BiffUnderstudy",
+      "twitter": "@biff_the_understudy"
     },
     "date": {
       "published": "1998-11-30",
