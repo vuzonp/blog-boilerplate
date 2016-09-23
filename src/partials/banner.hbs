@@ -1,24 +1,22 @@
 <!-- Banner
 ============================================================================ -->
 
-<header id="banner" class="site-header">
+<header id="banner" role="banner" class="hero site-header">
 
-  <div itemprop="hasPart" itemscope itemtype="WPHeader">
+  <div itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader">
     <!-- http://a11yproject.com/posts/aria-landmark-roles/ -->
-    <h1 role="banner" id="sitename" class="site-headline" itemprop="name">
-      <a href="{{ blog.url }}/"
+    <h1 id="sitename" class="site-headline" itemprop="name">
+      <a href="{{ blog.url }}"
         class="site-logo"
         rel="home"
         tabindex="1"
         aria-label="Go to homepage">
         <!--[if lte IE 8]>
-        <img src="#" class="site-logo__pict logo logo--png" alt="" />
+        <img src="#" class="site-logo__pict logo" alt="" />
         <![endif]-->
         <!--[if gte IE 9]><!-->
         <svg
           id="main-logotype"
-          aria-labelledby="headline"
-          aria-descriptedby="logodesc"
           class="site-logo__pict logo logo--svg"
           viewBox="0 0 128 128"
           height="128"
@@ -29,8 +27,8 @@
         </svg>
         <!--<![endif]-->
       </a>
-      <p id="subtitle" class="a11y-sr-only">{{ blog.description }}</p>
     </h1>
+    <p id="subtitle" class="a11y-sr-only">{{ blog.description }}</p>
   </div>
 
 </header><!-- #banner -->
@@ -42,50 +40,46 @@
   <!-- A11y Quick Menu -->
   <nav id="quick-menu" class="site-quick-menu">
     <h2 class="a11y-sr-only">Quick menu</h2>
-    <ul>
+    <ul class="a11y-sr-only">
       <li>
-        <a href="#content" class="a11y-sr-only focusable" tabindex="1">
+        <a href="#content" tabindex="1">
           Skip to content
         </a>
       </li>
-      <li><a href="#main-menu" class="a11y-sr-only focusable" tabindex="1">Skip to main menu</a></li>
-      <li><a href="#search" class="a11y-sr-only focusable" tabindex="1">Skip to search</a></li>
-      <li><a href="#sidebar" class="a11y-sr-only focusable" tabindex="1">Skip to sidebar</a></li>
-      <li><a href="#main-footer" class="a11y-sr-only focusable" tabindex="1">Skip to legacies</a></li>
-      <li><a href="{{ git.linkToIssues }}" class="a11y-sr-only focusable" tabindex="1">Report an issue</a></li>
+      <li><a href="#main-menu" tabindex="1">Skip to main menu</a></li>
+      <li><a href="#search" tabindex="1">Skip to search</a></li>
+      <li><a href="#sidebar" tabindex="1">Skip to sidebar</a></li>
+      <li><a href="#main-footer" tabindex="1">Skip to legacies</a></li>
+      <li><a href="{{ git.linkToIssues }}" tabindex="1">Report an issue</a></li>
     </ul>
   </nav><!-- #quick-menu -->
 
   <!-- Main Menu -->
   <nav id="navbar" class="site-menu">
     <h2 class="a11y-sr-only">Navbar Menu</h2>
-    <ul id="main-menu">
-      <li>
-        <a href="#" tabindex="2">Category 1</a>
-        <ul>
-          <li><a href="#" tabindex="2">Category 1.1</a></li>
-          <li><a href="#" tabindex="2">Category 1.2</a></li>
-        </ul>
-      </li>
-      <li><a href="#" tabindex="2">Category 2</a></li>
-      <li><a href="#" tabindex="2">Category 3</a></li>
-      <li><a href="#" tabindex="2">Category 4</a></li>
-      <li><a href="#" tabindex="2">Category 5</a></li>
-    </ul>
+    <div id="main-menu">
+      <ul class="navlist">
+        <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 1</a></li>
+        <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 2</a></li>
+        <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 3</a></li>
+        <li class="navlist__item navlist__item--page"><a href="#" tabindex="2">Page 1</a></li>
+        <li class="navlist__item navlist__item--page"><a href="#" tabindex="2">Page 2</a></li>
+      </ul>
+    </div>
   </nav><!-- #navbar -->
 
   <!-- Search
   http://adrianroselli.com/2015/08/where-to-put-your-search-role.html -->
   <form class="search-menu" action="#" method="GET">
     <div role="search">
-      <div class="">
+      <div class="search-menu__field">
         <label for="q">Search</label>
         <input id="q" type="search" name="q" placeholder="keyword(s)">
       </div>
-      <button>
+      <button class="search-menu__btn">
         <span class="icon icon--search" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="24" height="24">
-            <use xlink:href="#symb-search" />
+            <use xlink:href="#icon-search" />
           </svg>
         </span>
         <span class="a11y-sr-only">Search on website</span>
