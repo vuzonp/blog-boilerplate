@@ -13,7 +13,7 @@
   <!-- https://developers.facebook.com/docs/reference/opengraph/object-type/website/ -->
   <meta property="fb:app_id" content="123456789101112" />
   <meta property="og:type"   content="website" />
-  <meta property="og:url"    content="http://example.com//" />
+  <meta property="og:url"    content="http://example.com/" />
   <meta property="og:title"  content="An actor from Athkatla | Biff the Understudy" />
   <meta property="og:image"  content="http://placehold.it/240x240" />
 
@@ -26,7 +26,7 @@
   <meta name="twitter:image" content="http://placehold.it/240x240" />
 
   <!-- SEO -->
-  <link rel="canonical" href="http://example.com//" />
+  <link rel="canonical" href="http://example.com/" />
   <link rel="publisher" href="https://plus.google.com/+BiffUnderstudy" />
   <script data-schema="Organization" type="application/ld+json">
     {
@@ -73,7 +73,7 @@
     height: 1.5em;
     width: 1.5em;
   }
-  /* Logotype */
+  /* Test de logotype */
   .no-svg svg, .logo--bitmap { display: none; }
   .no-svg .logo--bitmap { display: block; }
   /* https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L131 */
@@ -182,7 +182,7 @@
           <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 1</a></li>
           <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 2</a></li>
           <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 3</a></li>
-          <li class="navlist__item navlist__item--page"><a href="#" tabindex="2">Page 1</a></li>
+          <li class="navlist__item navlist__item--page"><a href="http://example.com/about/" tabindex="2">About</a></li>
           <li class="navlist__item navlist__item--page"><a href="#" tabindex="2">Page 2</a></li>
         </ul>
       </div>
@@ -211,6 +211,29 @@
 
   <div class="site-wrapper" id="top">
 
+    <!-- Breadcrumb
+    ========================================================================== -->
+    <nav id="breadcrumb">
+      <!-- https://www.uvd.co.uk/blog/accessible-breadcrumbs-using-aria/ -->
+      <p id="breadcrumblabel" class="visuallyhidden">You are here:</p>
+      <ol itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-labelledby="breadcrumblabel">
+          <a itemprop="item" href="http://example.com" rel="index" title="Home" tabindex="3">
+            <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+              <use xlink:href="#svg-picto-home" /><a class="visuallyhidden focusable" href="#maincontent" aria-label="skip : main content">Skip to main content</a>
+            </svg>
+            <span itemprop="name">Home</span>
+            <meta itemprop="position" content="1" />
+          </a>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-labelledby="breadcrumblabel">
+          <a itemprop="item" href="http://example.com/about">
+            <span itemprop="name">About</span>
+            <meta itemprop="position" content="2" />
+          </a>
+        </li>
+      </ol>
+    </nav>
 
     <!-- https://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
     <main role="main" id="content" class="site-content" tabindex="-1">
