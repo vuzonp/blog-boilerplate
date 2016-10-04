@@ -15,5 +15,9 @@
       "published": "1998-11-30",
       "modified": "2000-09-24"
     }
+  },
+  "page": {
+    "name": "My Example Page",
+    "subtitle": "A static page that refers to nothing…"
   }
 }

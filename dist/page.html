@@ -1,0 +1,298 @@
+<!doctype html>
+<html
+  lang="en"
+  class="no-js">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>My Example Page | Biff the Understudy</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
+  <meta name="referrer" content="unsafe-url" />
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
+
+  <!-- https://developers.facebook.com/docs/reference/opengraph/object-type/website/ -->
+  <meta property="fb:app_id" content="123456789101112" />
+  <meta property="og:type"   content="website" />
+  <meta property="og:url"    content="http://example.com/" />
+  <meta property="og:title"  content="An actor from Athkatla | Biff the Understudy" />
+  <meta property="og:image"  content="http://placehold.it/240x240" />
+
+  <!-- https://dev.twitter.com/cards/types/summary -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@biff_the_understudy" />
+  <meta name="twitter:title" content="An actor from Athkatla | Biff the Understudy" />
+  <meta name="twitter:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
+  <!-- (>= 120x120 px | < 1Mb) -->
+  <meta name="twitter:image" content="http://placehold.it/240x240" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="http://example.com/" />
+  <link rel="publisher" href="https://plus.google.com/+BiffUnderstudy" />
+  <script data-schema="Organization" type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Biff the Understudy"
+    }
+  </script>
+  <script data-schema="Blog" type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Blog",
+      "name": "Biff the Understudy",
+      "headline": "An actor from Athkatla",
+      "datePublished": "1998-11-30",
+      "dateModified": "2000-09-24",
+      "image": [
+        "http://placehold.it/240x240"
+      ]
+    }
+  </script>
+
+  <!-- Styles -->
+  <style media="screen">
+  body {
+    background: #fff;
+    font: 1em/1.5 "Fira Sans", sans-serif;
+  }
+  /* Vectorial */
+  svg, symbol, image, marker, pattern, foreignObject { overflow: hidden }
+  svg {
+    display: block;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+  }
+  /* Icons */
+  [class^="icon"] {
+    display: inline-block;
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width:0;
+    vertical-align: middle;
+    height: 1.5em;
+    width: 1.5em;
+  }
+  /* Test de logotype */
+  .no-svg svg, .logo--bitmap { display: none; }
+  .no-svg .logo--bitmap { display: block; }
+  /* https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L131 */
+  .a11y-sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .a11y-sr-only.focusable:active,
+  .a11y-sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+  </style>
+  <link rel="Stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i" />
+  <link rel="Stylesheet" type="text/css" href="./styles.css" />
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+
+  <svg
+    class="a11y-sr-only"
+    preserveAspectRatio="xMidYMid"
+    version="1.1"
+    width="24" height="24"
+    viewBox="0 0 24 24"
+    xml:lang="en-US">
+  
+    <symbol id="icon-search">
+      <title id="label-search">Magnifying Glass Symbol</title>
+      <circle cx="9" cy="9" r="5" stroke-width="2" fill="none" />
+      <polygon points="12,12 14,12 18,16 16,18 12,14" />
+    </symbol>
+  
+  </svg>
+  <!-- Banner
+  ============================================================================ -->
+  
+  <header id="banner" role="banner" class="hero site-header">
+  
+    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader">
+      <!-- http://a11yproject.com/posts/aria-landmark-roles/ -->
+      <h1 id="sitename" class="site-headline" itemprop="name">
+        <a href="http://example.com/"
+          class="site-logo"
+          rel="home"
+          tabindex="1"
+          aria-label="Go to homepage">
+          <!--[if lte IE 8]>
+          <img src="#" class="site-logo__pict logo" alt="" />
+          <![endif]-->
+          <!--[if gte IE 9]><!-->
+          <svg
+            id="main-logotype"
+            class="site-logo__pict logo logo--svg"
+            viewBox="0 0 128 128"
+            height="128"
+            width="128">
+            <title id="headline">Biff the Understudy</title>
+            <desc id="logodesc">Objective description of the logo</desc>
+            <rect x="0" y="0" width="128" height="128" />
+          </svg>
+          <!--<![endif]-->
+        </a>
+      </h1>
+      <p id="subtitle" class="a11y-sr-only"></p>
+    </div>
+  
+  </header><!-- #banner -->
+  
+  <!-- Navigation
+  ============================================================================ -->
+  
+  <div class="site-navbar">
+    <!-- A11y Quick Menu -->
+    <nav id="quick-menu" class="site-quick-menu">
+      <h2 class="a11y-sr-only">Quick menu</h2>
+      <ul class="a11y-sr-only">
+        <li>
+          <a href="#content" tabindex="1">
+            Skip to content
+          </a>
+        </li>
+        <li><a href="#main-menu" tabindex="1">Skip to main menu</a></li>
+        <li><a href="#search" tabindex="1">Skip to search</a></li>
+        <li><a href="#sidebar" tabindex="1">Skip to sidebar</a></li>
+        <li><a href="#main-footer" tabindex="1">Skip to legacies</a></li>
+        <li><a href="" tabindex="1">Report an issue</a></li>
+      </ul>
+    </nav><!-- #quick-menu -->
+  
+    <!-- Main Menu -->
+    <nav id="navbar" class="site-menu">
+      <h2 class="a11y-sr-only">Navbar Menu</h2>
+      <div id="main-menu">
+        <ul class="navlist">
+          <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 1</a></li>
+          <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 2</a></li>
+          <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 3</a></li>
+          <li class="navlist__item navlist__item--page"><a href="http://example.com/about/" tabindex="2">About</a></li>
+          <li class="navlist__item navlist__item--page"><a href="#" tabindex="2">Page 2</a></li>
+        </ul>
+      </div>
+    </nav><!-- #navbar -->
+  
+    <!-- Search
+    http://adrianroselli.com/2015/08/where-to-put-your-search-role.html -->
+    <form class="search-menu" action="#" method="GET">
+      <div role="search">
+        <div class="search-menu__field">
+          <label for="q">Search</label>
+          <input id="q" type="search" name="q" placeholder="keyword(s)">
+        </div>
+        <button class="search-menu__btn">
+          <span class="icon icon--search" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <use xlink:href="#icon-search" />
+            </svg>
+          </span>
+          <span class="a11y-sr-only">Search on website</span>
+        </button>
+      </div>
+    </form>
+  
+  </div><!-- .site-navbar -->
+
+  <div class="site-wrapper" id="top">
+
+    <!-- Breadcrumb
+    ========================================================================== -->
+    <nav id="breadcrumb">
+      <!-- https://www.uvd.co.uk/blog/accessible-breadcrumbs-using-aria/ -->
+      <p id="breadcrumblabel" class="visuallyhidden">You are here:</p>
+      <ol itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-labelledby="breadcrumblabel">
+          <a itemprop="item" href="http://example.com" rel="index" title="Home" tabindex="3">
+            <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+              <use xlink:href="#svg-picto-home" /><a class="visuallyhidden focusable" href="#maincontent" aria-label="skip : main content">Skip to main content</a>
+            </svg>
+            <span itemprop="name">Home</span>
+            <meta itemprop="position" content="1" />
+          </a>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-labelledby="breadcrumblabel">
+          <a itemprop="item" href="http://example.com/my-page">
+            <span itemprop="name">My Page</span>
+            <meta itemprop="position" content="2" />
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- https://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
+    <main role="main" id="content" class="site-content" tabindex="-1">
+      <article class="article article--single article--about">
+
+        <header class="headlines">
+          <h1 itemprop="name">My Example Page</h1>
+          <p class="subtitle">A static page that refers to nothing…&rsquo;s blog</p>
+        </header>
+
+        <div class="body" itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/WebPageElement">
+          <div itemprop="text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+              et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+              felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+              consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+              nec, vulputate eget, arcu.
+            </p>
+            <h2 itemprop="name">Lorem ipsum dolor sit amet</h2>
+            <p>
+              In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
+              dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+              Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+              Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+            </p>
+            <p>
+              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+              Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+              ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas
+              tempus, tellus eget condimentum rhoncus, sem quam semper libero,
+              sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel,
+              luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
+              tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
+              Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+              Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis
+              magna. Sed consequat, leo eget bibendum sodales,
+              augue velit cursus nunc.
+            </p>
+          </div>
+        </div>
+
+      </article>
+    </main>
+  </div>
+
+  <footer role="contentinfo" id="legals" class="site-footer" itemprop="hasPart" itemscope itemtype="https://schema.org/WPFooter">
+    <a href="#top" class="a11y-sr-only focusable" title="Back to the top of the page">&#x21ef;</a>
+  
+    <div class="copyright site-footer__content">
+      <p>©2016 Vuzonp, All Right Reserved.</p>
+    </div>
+    <!-- For french people:
+    <div class="banner-cookies" lang="fr">
+       https://www.cnil.fr/fr/exemple-de-bandeau-cookie
+    </div> -->
+  </footer>
+
+</body>
+</html>

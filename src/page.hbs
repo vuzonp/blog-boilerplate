@@ -1,0 +1,61 @@
+{{> head name=page.name }}
+<body itemscope itemtype="https://schema.org/WebPage">
+
+  {{> sprite }}
+  {{> banner }}
+
+  <div class="site-wrapper" id="top">
+
+    {{> breadcrumb name="My Page" url="my-page" }}
+
+    <!-- https://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
+    <main role="main" id="content" class="site-content" tabindex="-1">
+      <article class="article article--single article--about">
+
+        <header class="headlines">
+          <h1 itemprop="name">{{ page.name }}</h1>
+          <p class="subtitle">{{ page.subtitle }}&rsquo;s blog</p>
+        </header>
+
+        <div class="body" itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/WebPageElement">
+          <div itemprop="text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+              et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+              felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+              consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+              nec, vulputate eget, arcu.
+            </p>
+            <h2 itemprop="name">Lorem ipsum dolor sit amet</h2>
+            <p>
+              In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
+              dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+              Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+              Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+            </p>
+            <p>
+              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+              Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+              ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas
+              tempus, tellus eget condimentum rhoncus, sem quam semper libero,
+              sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel,
+              luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
+              tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
+              Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+              Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis
+              magna. Sed consequat, leo eget bibendum sodales,
+              augue velit cursus nunc.
+            </p>
+          </div>
+        </div>
+
+      </article>
+    </main>
+  </div>
+
+  {{> footer }}
+
+</body>
+</html>
