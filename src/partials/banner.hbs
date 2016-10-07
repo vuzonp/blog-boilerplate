@@ -71,12 +71,10 @@
   <!-- Search
   http://adrianroselli.com/2015/08/where-to-put-your-search-role.html -->
   <form class="search-menu" action="#" method="GET">
-    <div role="search">
-      <div class="search-menu__field">
-        <label for="q">Search</label>
-        <input id="q" type="search" name="q" placeholder="keyword(s)">
-      </div>
-      <button class="search-menu__btn">
+    <div class="field-group" role="search">
+      <label for="q" class="a11y-sr-only">Search</label>
+      <input id="q" type="search" name="q" placeholder="keyword(s)">
+      <button class="btn">
         <span class="icon icon--search" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="24" height="24">
             <use xlink:href="#icon-search" />
