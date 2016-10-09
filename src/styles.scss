@@ -1,0 +1,320 @@
+// References :
+// - https://philipwalton.github.io/solved-by-flexbox/
+
+// Settings
+//------------------------------------------------------------------------------
+
+// Typography
+$fontSize: 1rem;
+$baseline: 1.5rem;
+$fontFamily: 'Fira Sans' sans-serif;
+
+// ColorScheme - Solarized
+// http://ethanschoonover.com/solarized
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+//------------------------------------------------------------------------------
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: $base3;
+  color: $base00;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $baseline;
+}
+
+// Typography
+//------------------------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6, strong, em {
+  color: $base01;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: normal;
+  margin: ($baseline * .5) 0;
+}
+
+h1 {
+  font-size: ($baseline * 1.5);
+  line-height: ($baseline * 1.5);
+  margin: $baseline 0;
+}
+
+h2 {
+  font-size: ($baseline * 1.25);
+  line-height: ($baseline * 1.5);
+}
+
+h3 {
+  font-size: ($baseline * 1.125);
+  line-height: $baseline;
+}
+
+h4 {
+  font-size: $fontSize;
+  line-height: $baseline;
+}
+
+h1.site-headline {
+  margin: 0;
+}
+
+ul, ol, dl, blockquote {
+  margin: $baseline 0;
+  padding-left: $baseline;
+}
+
+a {
+  color: $yellow;
+}
+a:focus,
+a:hover {
+  color: $orange;
+}
+
+a:visited {
+  color: $violet;
+}
+
+// Accessibility
+//------------------------------------------------------------------------------
+
+/* https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L131 */
+.a11y-sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.a11y-sr-only.focusable:active,
+.a11y-sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+// Layout - Holy Grail Layout
+//------------------------------------------------------------------------------
+
+// .HolyGrail
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+// .HolyGrail-body
+.site-content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  margin: ($baseline * 2) 0;
+}
+
+.site-breadcrumb,
+.site-header,
+.site-footer {
+  background: $base2;
+  flex: none;
+}
+
+.site-breadcrumb {
+  background: $base3;
+  color: $base00;
+}
+
+.site-footer {
+  color: $base1;
+  font-size: $fontSize * 0.75;
+  text-align: center;
+}
+
+@media only screen and (min-width: 48em) {
+  .site-content {
+    flex-direction: row;
+    flex: 1;
+  }
+
+  .site-sidebar {
+    background: $base2;
+    color: $base00;
+    flex: 0 0 16em;
+    padding: 0 $baseline;
+  }
+  .site-sidebar--right {
+    order: 2;
+  }
+  .site-sidebar--left {
+    order: -1;
+  }
+}
+
+
+// Layout - Grid System
+//------------------------------------------------------------------------------
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+  width: 100%;
+  // width: calc(100% - $baseline * 2);
+}
+
+
+// Components
+//------------------------------------------------------------------------------
+
+// Main Navigation
+// http://bradfrost.com/blog/web/responsive-nav-patterns
+// https://www.filamentgroup.com/lab/responsive-design-approach-for-navigation.html
+//------------------------------------------------------------------------------
+
+.navlist {
+  display: flex;
+  flex-direction: column;
+  margin: $baseline 0;
+}
+
+.navlist,
+.navlist__item {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+
+.navlist__item a {
+  color: $base02;
+  display: block;
+  font-size: 1.125rem;
+  padding: .5rem;
+  text-decoration: none;
+}
+
+.navlist__item a:hover,
+.navlist__item a:focus {
+  background: $base2;
+}
+
+.navlist__item.current {
+  font-weight: bold;
+}
+
+.navlist__item--category a {
+  color: $base03;
+}
+
+@media only screen and (min-width: 48em) {
+  .navlist {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;;
+  }
+}
+
+// Breadcrumb
+.breadcrumb-list {
+  color: $base1;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: ($baseline / 2) 0;
+}
+
+.breadcrumb-list li,
+.breadcrumb-list__item {
+  margin: 0;
+  padding: 0;
+
+  &::after {
+    content: '🠞';
+    margin: 0 .25ex;
+  }
+  &:last-of-type::after {
+    content: '';
+    margin: 0;
+  }
+  &:last-of-type a {
+    cursor: default;
+    color: $base1;
+    font-style: italic;
+  }
+}
+
+.breadcrumb-list a {
+  text-decoration: none;
+}
+
+
+// Formulaires
+//------------------------------------------------------------------------------
+
+label {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+// Inlined input groups
+.field-group {
+  align-items: center;
+  display: flex;
+}
+.field-group > input {
+  flex: 1;
+}
+.btn {
+  cursor: pointer;
+}
+
+// Icons
+//------------------------------------------------------------------------------
+
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width:0;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+}
+
+.icon--large {
+  height: $baseline;
+  width: $baseline;
+}
