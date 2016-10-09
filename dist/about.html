@@ -1,7 +1,7 @@
 <!doctype html>
 <html
-  lang="en"
-  class="no-js">
+lang="en"
+class="no-js">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -70,8 +70,8 @@
     stroke: currentColor;
     stroke-width:0;
     vertical-align: middle;
-    height: 1.5em;
-    width: 1.5em;
+    height: 1em;
+    width: 1em;
   }
   /* Test de logotype */
   .no-svg svg, .logo--bitmap { display: none; }
@@ -102,7 +102,6 @@
   <link rel="Stylesheet" type="text/css" href="./styles.css" />
 </head>
 <body itemscope itemtype="https://schema.org/AboutPage">
-
   <svg
     class="a11y-sr-only"
     preserveAspectRatio="xMidYMid"
@@ -117,109 +116,123 @@
       <polygon points="12,12 14,12 18,16 16,18 12,14" />
     </symbol>
   
+    <symbol id="icon-home">
+      <title id="label-home">Home Symbol</title>
+      <polygon
+        points="12,6 19,12 19,20 14,20 14,14 10,14 10,20 5,20 5,12" />
+        <polyline
+        points="3,11 12,3 21,11"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none" />
+    </symbol>
+  
   </svg>
-  <!-- Banner
-  ============================================================================ -->
-  
-  <header id="banner" role="banner" class="hero site-header">
-  
-    <div itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader">
-      <!-- http://a11yproject.com/posts/aria-landmark-roles/ -->
-      <h1 id="sitename" class="site-headline" itemprop="name">
-        <a href="http://example.com/"
-          class="site-logo"
-          rel="home"
-          tabindex="1"
-          aria-label="Go to homepage">
-          <!--[if lte IE 8]>
-          <img src="#" class="site-logo__pict logo" alt="" />
-          <![endif]-->
-          <!--[if gte IE 9]><!-->
-          <svg
-            id="main-logotype"
-            class="site-logo__pict logo logo--svg"
-            viewBox="0 0 128 128"
-            height="128"
-            width="128">
-            <title id="headline">Biff the Understudy</title>
-            <desc id="logodesc">Objective description of the logo</desc>
-            <rect x="0" y="0" width="128" height="128" />
-          </svg>
-          <!--<![endif]-->
-        </a>
-      </h1>
-      <p id="subtitle" class="a11y-sr-only"></p>
-    </div>
-  
-  </header><!-- #banner -->
-  
-  <!-- Navigation
-  ============================================================================ -->
-  
-  <div class="site-navbar">
-    <!-- A11y Quick Menu -->
-    <nav id="quick-menu" class="site-quick-menu">
-      <h2 class="a11y-sr-only">Quick menu</h2>
-      <ul class="a11y-sr-only">
-        <li>
-          <a href="#content" tabindex="1">
-            Skip to content
-          </a>
-        </li>
-        <li><a href="#main-menu" tabindex="1">Skip to main menu</a></li>
-        <li><a href="#search" tabindex="1">Skip to search</a></li>
-        <li><a href="#sidebar" tabindex="1">Skip to sidebar</a></li>
-        <li><a href="#main-footer" tabindex="1">Skip to legacies</a></li>
-        <li><a href="" tabindex="1">Report an issue</a></li>
-      </ul>
-    </nav><!-- #quick-menu -->
-  
-    <!-- Main Menu -->
-    <nav id="navbar" class="site-menu">
-      <h2 class="a11y-sr-only">Navbar Menu</h2>
-      <div id="main-menu">
-        <ul class="navlist">
-          <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 1</a></li>
-          <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 2</a></li>
-          <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 3</a></li>
-          <li class="navlist__item navlist__item--page"><a href="http://example.com/about/" tabindex="2">About</a></li>
-          <li class="navlist__item navlist__item--page"><a href="#" tabindex="2">Page 2</a></li>
-        </ul>
-      </div>
-    </nav><!-- #navbar -->
-  
-    <!-- Search
-    http://adrianroselli.com/2015/08/where-to-put-your-search-role.html -->
-    <form class="search-menu" action="#" method="GET">
-      <div class="field-group" role="search">
-        <label for="q" class="a11y-sr-only">Search</label>
-        <input id="q" type="search" name="q" placeholder="keyword(s)">
-        <button class="btn">
-          <span class="icon icon--search" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24">
-              <use xlink:href="#icon-search" />
-            </svg>
-          </span>
-          <span class="a11y-sr-only">Search on website</span>
-        </button>
-      </div>
-    </form>
-  
-  </div><!-- .site-navbar -->
-
   <div class="site-wrapper" id="top">
+    <!-- Banner
+    ============================================================================ -->
+    
+    <header id="banner" role="banner" class="hero site-header">
+    
+      <div class="wrapper" itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader">
+        <!-- http://a11yproject.com/posts/aria-landmark-roles/ -->
+        <h1 id="sitename" class="site-headline" itemprop="name">
+          <a href="http://example.com/"
+            class="site-logo"
+            rel="home"
+            tabindex="1"
+            aria-label="Go to homepage">
+            <!--[if lte IE 8]>
+            <img src="#" class="site-logo__pict logo" alt="" />
+            <![endif]-->
+            <!--[if gte IE 9]><!-->
+            <svg
+              id="main-logotype"
+              class="site-logo__pict logo logo--svg"
+              viewBox="0 0 128 128"
+              height="128"
+              width="128">
+              <title id="headline">Biff the Understudy</title>
+              <desc id="logodesc">Objective description of the logo</desc>
+              <rect x="0" y="0" width="128" height="128" />
+            </svg>
+            <!--<![endif]-->
+          </a>
+        </h1>
+        <p id="subtitle" class="a11y-sr-only"></p>
+      </div>
+    
+    </header><!-- #banner -->
+    
+    <!-- Navigation
+    ============================================================================ -->
+    
+    <div class="site-navbar">
+      <!-- A11y Quick Menu -->
+      <nav id="quick-menu" class="site-quick-menu">
+        <h2 class="a11y-sr-only">Quick menu</h2>
+        <ul class="a11y-sr-only">
+          <li>
+            <a href="#content" tabindex="1">
+              Skip to content
+            </a>
+          </li>
+          <li><a href="#main-menu" tabindex="1">Skip to main menu</a></li>
+          <li><a href="#search" tabindex="1">Skip to search</a></li>
+          <li><a href="#sidebar" tabindex="1">Skip to sidebar</a></li>
+          <li><a href="#main-footer" tabindex="1">Skip to legacies</a></li>
+          <li><a href="" tabindex="1">Report an issue</a></li>
+        </ul>
+      </nav><!-- #quick-menu -->
+    
+      <!-- Main Menu -->
+      <nav id="navbar" class="site-menu">
+        <h2 class="a11y-sr-only">Navbar Menu</h2>
+        <div id="main-menu" class="wrapper">
+          <ul class="navlist">
+            <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 1</a></li>
+            <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 2</a></li>
+            <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 3</a></li>
+            <li class="navlist__item navlist__item--page"><a href="http://example.com/about/" tabindex="2">About</a></li>
+            <li class="navlist__item navlist__item--page"><a href="#" tabindex="2">Page 2</a></li>
+            <li class="navlist__item navlist__item--search">
+              <!-- Search
+              http://adrianroselli.com/2015/08/where-to-put-your-search-role.html -->
+              <form class="search-menu" action="#" method="GET">
+                <div class="field-group" role="search">
+                  <label for="q" class="a11y-sr-only">Search</label>
+                  <input id="q" type="search" name="q" placeholder="keyword(s)">
+                  <button class="btn">
+                    <span class="icon icon--large" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="24" height="24">
+                        <use xlink:href="#icon-search" />
+                      </svg>
+                    </span>
+                    <span class="a11y-sr-only">Search on website</span>
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav><!-- #navbar -->
+    
+    </div><!-- .site-navbar -->
 
     <!-- Breadcrumb
     ========================================================================== -->
-    <nav id="breadcrumb">
+    <nav id="breadcrumb" class="site-breadcrumb wrapper">
       <!-- https://www.uvd.co.uk/blog/accessible-breadcrumbs-using-aria/ -->
-      <p id="breadcrumblabel" class="visuallyhidden">You are here:</p>
-      <ol itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <p id="breadcrumblabel" class="a11y-sr-only">You are here:</p>
+      <ol class="breadcrumb-list" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-labelledby="breadcrumblabel">
           <a itemprop="item" href="http://example.com" rel="index" title="Home" tabindex="3">
-            <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-              <use xlink:href="#svg-picto-home" /><a class="visuallyhidden focusable" href="#maincontent" aria-label="skip : main content">Skip to main content</a>
-            </svg>
+            <span aria-labelledby="label-home">
+              <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-home" /><a class="visuallyhidden focusable" href="#maincontent" aria-label="skip : main content">Skip to main content</a>
+              </svg>
+            </span>
             <span itemprop="name">Home</span>
             <meta itemprop="position" content="1" />
           </a>
@@ -233,15 +246,14 @@
       </ol>
     </nav>
 
-    <!-- https://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
-    <main role="main" id="content" class="site-content" tabindex="-1">
+    <main role="main" id="content" class="site-content wrapper" tabindex="-1">
       <article class="article article--single article--about">
-
+        
         <header class="headlines">
           <h1 itemprop="name">Biff the Understudy</h1>
           <p class="subtitle">What About Biff&rsquo;s blog</p>
         </header>
-
+        
         <figure class="illustration" itemprop="primaryImageOfPage" itemscope itemtype="https://schema.org/ImageObject">
           <picture>
             <source srcset="http://placehold.it/300x300 1x, http://placehold.it/600x600 2x" />
@@ -255,7 +267,7 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </figcaption>
         </figure>
-
+        
         <div class="lead" itemprop="description">
           <p>
             Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
@@ -264,7 +276,7 @@
             Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
           </p>
         </div>
-
+        
         <div class="body" itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/WebPageElement">
           <h2 itemprop="name">Lorem ipsum dolor sit amet</h2>
           <div itemprop="text">
@@ -298,22 +310,71 @@
             </p>
           </div>
         </div>
-
       </article>
+      <section id="sidebar" class="site-sidebar site-sidebar--right">
+        <h2>Secondary Navigation</h2>
+      
+        <aside class="widget widget--publisher">
+          <h3>Welcome</h3>
+          <div class="">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam.
+            </p>
+          </div>
+        </aside>
+      
+        <nav class="widget widget--socials">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </nav>
+      
+        <nav>
+          <h3>Categories</h3>
+          <ul>
+            <li>Categoy 1</li>
+            <li>Categoy 2</li>
+            <li>Categoy 3</li>
+            <li>Categoy 4</li>
+            <li>Categoy 5</li>
+          </ul>
+        </nav>
+      
+        <nav class="widget widget--last-comments">
+          <ul>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </nav>
+      
+        <nav class="widget widget--archives">
+          <ul>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </nav>
+      
+        <nav class="widget widget--blogroll">
+          <ul>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </nav>
+      
+      </section>
     </main>
+    <footer role="contentinfo" id="legals" class="site-footer" itemprop="hasPart" itemscope itemtype="https://schema.org/WPFooter">
+      <a href="#top" class="a11y-sr-only focusable" title="Back to the top of the page">&#x21ef;</a>
+    
+      <div class="copyright site-footer__content">
+        <p>©2016 Vuzonp, All Right Reserved.</p>
+      </div>
+      <!-- For french people:
+      <div class="banner-cookies" lang="fr">
+         https://www.cnil.fr/fr/exemple-de-bandeau-cookie
+      </div> -->
+    </footer>
   </div>
-
-  <footer role="contentinfo" id="legals" class="site-footer" itemprop="hasPart" itemscope itemtype="https://schema.org/WPFooter">
-    <a href="#top" class="a11y-sr-only focusable" title="Back to the top of the page">&#x21ef;</a>
-  
-    <div class="copyright site-footer__content">
-      <p>©2016 Vuzonp, All Right Reserved.</p>
-    </div>
-    <!-- For french people:
-    <div class="banner-cookies" lang="fr">
-       https://www.cnil.fr/fr/exemple-de-bandeau-cookie
-    </div> -->
-  </footer>
-
 </body>
 </html>

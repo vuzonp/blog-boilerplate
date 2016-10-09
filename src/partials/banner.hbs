@@ -3,7 +3,7 @@
 
 <header id="banner" role="banner" class="hero site-header">
 
-  <div itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader">
+  <div class="wrapper" itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader">
     <!-- http://a11yproject.com/posts/aria-landmark-roles/ -->
     <h1 id="sitename" class="site-headline" itemprop="name">
       <a href="{{ blog.url }}/"
@@ -57,32 +57,33 @@
   <!-- Main Menu -->
   <nav id="navbar" class="site-menu">
     <h2 class="a11y-sr-only">Navbar Menu</h2>
-    <div id="main-menu">
+    <div id="main-menu" class="wrapper">
       <ul class="navlist">
         <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 1</a></li>
         <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 2</a></li>
         <li class="navlist__item navlist__item--category"><a href="#" tabindex="2">Category 3</a></li>
         <li class="navlist__item navlist__item--page"><a href="{{ blog.url }}/about/" tabindex="2">About</a></li>
         <li class="navlist__item navlist__item--page"><a href="#" tabindex="2">Page 2</a></li>
+        <li class="navlist__item navlist__item--search">
+          <!-- Search
+          http://adrianroselli.com/2015/08/where-to-put-your-search-role.html -->
+          <form class="search-menu" action="#" method="GET">
+            <div class="field-group" role="search">
+              <label for="q" class="a11y-sr-only">Search</label>
+              <input id="q" type="search" name="q" placeholder="keyword(s)">
+              <button class="btn">
+                <span class="icon icon--large" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="24" height="24">
+                    <use xlink:href="#icon-search" />
+                  </svg>
+                </span>
+                <span class="a11y-sr-only">Search on website</span>
+              </button>
+            </div>
+          </form>
+        </li>
       </ul>
     </div>
   </nav><!-- #navbar -->
-
-  <!-- Search
-  http://adrianroselli.com/2015/08/where-to-put-your-search-role.html -->
-  <form class="search-menu" action="#" method="GET">
-    <div class="field-group" role="search">
-      <label for="q" class="a11y-sr-only">Search</label>
-      <input id="q" type="search" name="q" placeholder="keyword(s)">
-      <button class="btn">
-        <span class="icon icon--search" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24">
-            <use xlink:href="#icon-search" />
-          </svg>
-        </span>
-        <span class="a11y-sr-only">Search on website</span>
-      </button>
-    </div>
-  </form>
 
 </div><!-- .site-navbar -->

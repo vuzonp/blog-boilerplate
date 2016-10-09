@@ -1,14 +1,16 @@
 <!-- Breadcrumb
 ========================================================================== -->
-<nav id="breadcrumb">
+<nav id="breadcrumb" class="site-breadcrumb wrapper">
   <!-- https://www.uvd.co.uk/blog/accessible-breadcrumbs-using-aria/ -->
-  <p id="breadcrumblabel" class="visuallyhidden">You are here:</p>
-  <ol itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+  <p id="breadcrumblabel" class="a11y-sr-only">You are here:</p>
+  <ol class="breadcrumb-list" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-labelledby="breadcrumblabel">
       <a itemprop="item" href="{{ blog.url }}" rel="index" title="Home" tabindex="3">
-        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-          <use xlink:href="#svg-picto-home" /><a class="visuallyhidden focusable" href="#maincontent" aria-label="skip : main content">Skip to main content</a>
-        </svg>
+        <span aria-labelledby="label-home">
+          <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <use xlink:href="#icon-home" /><a class="visuallyhidden focusable" href="#maincontent" aria-label="skip : main content">Skip to main content</a>
+          </svg>
+        </span>
         <span itemprop="name">Home</span>
         <meta itemprop="position" content="1" />
       </a>
