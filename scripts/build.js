@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 const clc = require('cli-color');
 const glob = require("glob");
-const handlebars = require("handlebars");
+const Handlebar = require("handlebars");
 const sass = require("node-sass");
 
 // Setup
@@ -34,7 +34,7 @@ function make(file) {
       })
     );
 
-    template = handlebars.compile(src);
+    template = Handlebar.compile(src);
     html = template(data);
 
     fs.writeFile(outfile, html, function(err) {
@@ -59,7 +59,7 @@ glob(src + "partials/*.hbs", {}, function(err, files) {
   files.forEach(function(file) {
     let partialContent = fs.readFileSync(file);
     if (partialContent) {
-      handlebars.registerPartial(
+      Handlebar.registerPartial(
         path.parse(file)["name"],
         partialContent.toString()
       );
@@ -89,7 +89,7 @@ sass.render({
 }, function(err, result) {
   if (err) { throw err; }
 
-    template = handlebars.compile(src);
+    template = Handlebar.compile(src);
     html = template(data);
 
     fs.writeFile(cssOutfile, result.css, function(err) {
